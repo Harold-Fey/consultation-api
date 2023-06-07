@@ -34,3 +34,7 @@ Route::resource('predictions', PredictionController::class)->only([
 Route::resource('donnees', DonneesMedicalController::class)->only([
     'index', 'show', 'store', 'update', 'destroy'
 ]);
+
+Route::middleware('auth:api')->group(function() {
+    Route::delete('logout', [LoginController::class, 'delete']);
+});
