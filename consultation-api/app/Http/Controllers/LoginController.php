@@ -32,7 +32,7 @@ class LoginController extends ApiController
                 return $this->errorResponse($error);
             }
         } catch (Exception $error) {
-            return $this->errorResponse($error);
+            return $this->errorResponse($error->getMessage());
         }
 
     }
