@@ -42,4 +42,4 @@ Route::middleware('auth:api')->group(function() {
     Route::get('roles', [LogoutController::class, 'displayRoles']);
 });
 
-Route::post('login', [LoginController::class, 'store']);
+Route::post('log-in', [LoginController::class, 'store']);
