@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use App\Services\LoginService;
 use App\Http\Requests\UserRequest;
@@ -15,7 +16,8 @@ class LoginController extends ApiController
     }
     public function store(LoginRequest $request)
     {
-        $user = $this->loginService->findUser($request);
+        try {
+            $user = $this->loginService->findUser($request);
             if ($user) {
                 $check = $this->loginService->checkIfPasswordMatch($request, $user);
                 if ($check){
@@ -29,6 +31,10 @@ class LoginController extends ApiController
                 $error = [ "error" => __('utilisateur non trouvé')];
                 return $this->errorResponse($error);
             }
+        } catch (Exception $error) {
+            return $this->errorResponse($error);
+        }
+
     }
 
 
