@@ -16,6 +16,8 @@ class PredictionController extends ApiController
     {
         $this->predictionService = $predictionService;
         $this->middleware('auth:api');
+        $this->middleware('role:Medecin');
+
     }
     /**
      * Display a listing of the resource.

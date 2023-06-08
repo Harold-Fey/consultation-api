@@ -15,6 +15,7 @@ class UserController extends ApiController
     {
         $this->userService = $userService;
         $this->middleware('auth:api');
+        $this->middleware('role:Admin');
     }
     /**
      * Display a listing of the resource.

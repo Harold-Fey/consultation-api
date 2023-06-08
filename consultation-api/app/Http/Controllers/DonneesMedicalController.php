@@ -16,6 +16,8 @@ class DonneesMedicalController extends ApiController
     {
         $this->donneesMedicalService = $DonneesMedicalService;
         $this->middleware('auth:api');
+        $this->middleware('role:Professionel de Santé');
+
     }
     /**
      * Display a listing of the resource.

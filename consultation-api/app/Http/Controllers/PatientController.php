@@ -16,6 +16,8 @@ class PatientController extends ApiController
     {
         $this->patientService = $patientService;
         $this->middleware('auth:api');
+        $this->middleware('role:Professionel de Santé');
+
     }
     /**
      * Display a listing of the resource.

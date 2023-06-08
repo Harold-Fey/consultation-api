@@ -16,7 +16,8 @@ class Patient extends Model
         'date_de_naissance',
         'numero_de_telephone',
         'email',
-        'adresse'
+        'adresse',
+        'age'
     ];
 
     public function donnees()
