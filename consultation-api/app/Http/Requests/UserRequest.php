@@ -27,7 +27,7 @@ class UserRequest extends FormRequest
             'prenom' => "required|string",
             'poste' => "required|string",
             'sexe' => "required",
-            'N°_de_license' => "required",
+            'N_de_license' => "required",
             'mot_de_passe' => "required",
 
         ];
