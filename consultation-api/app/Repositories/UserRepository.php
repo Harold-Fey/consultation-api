@@ -40,7 +40,7 @@ class UserRepository
             'email' => $request->email,
             'poste' => $request->poste,
             'sexe' => $request->sexe,
-            'N°_de_license' => $request->N°_de_license,
+            'N_de_license' => $request->N°_de_license,
             'mot_de_passe' => bcrypt($request->mot_de_passe)
         ]);
         return $user;
@@ -73,7 +73,7 @@ class UserRepository
             'email' => $request->email,
             'poste' => $request->poste,
             'sexe' => $request->sexe,
-            'N°_de_license' => $request->N°_de_license,
+            'N_de_license' => $request->N°_de_license,
             'mot_de_passe' => bcrypt($request->mot_de_passe)
 
         ]);

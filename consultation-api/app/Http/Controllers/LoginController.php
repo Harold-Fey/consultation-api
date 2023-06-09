@@ -36,14 +36,4 @@ class LoginController extends ApiController
         }
 
     }
-
-
-    public function delete(Request $request)
-    {
-        $request->user()->token()->revoke();
-        $message = [
-            "message" => __("Opération effectuée avec succès")
-        ];
-        return $this->successResponse($message);
-    }
 }

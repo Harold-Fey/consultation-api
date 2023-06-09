@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('poste')->nullable();
             $table->string('sexe')->nullable();
-            $table->bigInteger('N°_de_license')->nullable();
+            $table->bigInteger('N_de_license')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('mot_de_passe');
             $table->rememberToken();

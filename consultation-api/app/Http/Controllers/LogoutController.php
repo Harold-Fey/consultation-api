@@ -12,6 +12,7 @@ class LogoutController extends ApiController
         $roles = Role::all();
         return $this->successResponse($roles);
     }
+    
     public function delete(Request $request)
     {
         $request->user()->token()->revoke();
