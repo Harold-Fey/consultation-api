@@ -54,7 +54,7 @@ class UserRepository
 
     public function displayAllUsers()
     {
-        return User::with('roles');
+        return User::with('roles')->get();
     }
 
     public function displayAUser($id)
