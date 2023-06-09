@@ -36,11 +36,12 @@ class UserRepository
     {
         $user =  User::create([
             'nom' => $request->nom,
-            'prenom' => $request->prenom,
+            'prenoms' => $request->prenoms,
             'email' => $request->email,
             'poste' => $request->poste,
             'sexe' => $request->sexe,
-            'N_de_license' => $request->N°_de_license,
+            'numero_de_telephone' => $request->numero_de_telephone,
+            'N_de_license' => $request->N_de_license,
             'mot_de_passe' => bcrypt($request->mot_de_passe)
         ]);
         return $user;
@@ -69,10 +70,11 @@ class UserRepository
         $user = User::find($id);
         return $user->update([
             'nom' => $request->nom,
-            'prenoms' => $request->prenom,
+            'prenoms' => $request->prenoms,
             'email' => $request->email,
             'poste' => $request->poste,
             'sexe' => $request->sexe,
+            'numero_de_telephone' => $request->numero_de_telephone,
             'N_de_license' => $request->N°_de_license,
             'mot_de_passe' => bcrypt($request->mot_de_passe)
 

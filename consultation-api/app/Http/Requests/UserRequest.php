@@ -24,11 +24,12 @@ class UserRequest extends FormRequest
         return [
             'email' => "required|email|unique:users,email",
             'nom' => "required|string",
-            'prenom' => "required|string",
+            'prenoms' => "required|string",
             'poste' => "required|string",
             'sexe' => "required",
             'N_de_license' => "required",
             'mot_de_passe' => "required",
+            'numero_de_telephone' => "required"
 
         ];
     }
