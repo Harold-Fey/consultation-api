@@ -25,7 +25,7 @@ class User extends Authenticatable
         'mot_de_passe',
         'poste',
         'sexe',
-        'N°_de_license',
+        'N_de_license',
         'mot_de_passe'
     ];
 
