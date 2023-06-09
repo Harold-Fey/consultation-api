@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PatientController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PredictionController;
 use App\Http\Controllers\DonneesMedicalController;
 
@@ -40,6 +41,8 @@ Route::resource('donnees', DonneesMedicalController::class)->only([
 Route::middleware('auth:api')->group(function() {
     Route::delete('logout', [LogoutController::class, 'delete']);
     Route::get('roles', [LogoutController::class, 'displayRoles']);
+
 });
 
 Route::post('log-in', [LoginController::class, 'store']);
+

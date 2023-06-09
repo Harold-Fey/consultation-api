@@ -22,6 +22,7 @@ class AdminSeeder extends Seeder
             'email' => 'admin@admin.com',
             'mot_de_passe' => bcrypt('123456789'),
             'prenoms' => 'admin',
+            'numero_de_telephone' => 00000000
 
         ]);
         $admin->assignRole('Admin');

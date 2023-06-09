@@ -42,7 +42,7 @@ class UserRepository
             'sexe' => $request->sexe,
             'numero_de_telephone' => $request->numero_de_telephone,
             'N_de_license' => $request->N_de_license,
-            'mot_de_passe' => bcrypt($request->mot_de_passe)
+            'mot_de_passe' => $request->mot_de_passe
         ]);
         return $user;
 
@@ -76,7 +76,7 @@ class UserRepository
             'sexe' => $request->sexe,
             'numero_de_telephone' => $request->numero_de_telephone,
             'N_de_license' => $request->N°_de_license,
-            'mot_de_passe' => bcrypt($request->mot_de_passe)
+            'mot_de_passe' => $request->mot_de_passe
 
         ]);
     }
