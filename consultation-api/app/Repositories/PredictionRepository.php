@@ -66,4 +66,15 @@ class PredictionRepository
 
     }
 
+    public function displayPatientsWithPredictions ()
+    {
+        $predictions = ResultatsPrediction::all();
+        $patients = [];
+        foreach($predictions as $prediction) {
+            $patient = $prediction->patient;
+            array_push($patients, $patient);
+        }
+        return $patientsCollection = collect($patients);
+    }
+
 }

@@ -56,4 +56,10 @@ class DonneesMedicalService {
             return false;
         }
     }
+
+    public function displayPatientsWithDonnees()
+    {
+        return $this->donneesMedicalRepository->displayPatientsWithDonnees();
+    }
 }
+

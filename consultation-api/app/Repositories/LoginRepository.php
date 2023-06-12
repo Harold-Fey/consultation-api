@@ -32,7 +32,11 @@ class LoginRepository {
 
     public function checkIfPasswordMatch($request, $user)
     {
-        return Hash::check($request->password, $user->mot_de_passe);
+        if($request->password == $user->mot_de_passe){
+            return $a = true;
+        }else{
+            return $b = false;
+        }
     }
 
 }

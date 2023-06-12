@@ -42,4 +42,9 @@ class PredictionService {
     {
         return $this->predictionRepository->registerAResultatsPrediction($request);
     }
+
+    public function displayPatientsWithPredictions()
+    {
+        return $this->predictionRepository->displayPatientsWithPredictions();
+    }
 }

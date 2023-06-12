@@ -14,9 +14,10 @@ class PatientController extends ApiController
 
     public function __construct(PatientService $patientService)
     {
+
         $this->patientService = $patientService;
         $this->middleware('auth:api');
-        $this->middleware('role:Professionel de Santé');
+        $this->middleware('role:Professionel de Santé|Medecin')->only(['index', 'show', 'store', 'update', 'delete']);
 
     }
     /**

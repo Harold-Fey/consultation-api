@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -45,4 +46,9 @@ Route::middleware('auth:api')->group(function() {
 });
 
 Route::post('log-in', [LoginController::class, 'store']);
+
+
+Route::get('prediction/patients', [ListController::class, 'patientsWithPredictions']);
+
+Route::get('donnee/patients', [ListController::class, 'patientsWithDonnees']);
 

@@ -23,7 +23,7 @@ class DonneesMedicalRepository
       */
     public function __construct(DonneesMedical $donneesMedical)
     {
-          $this->DonneesMedical = $donneesMedical;
+          $this->donneesMedical = $donneesMedical;
     }
 
     public function registerADonneesMedical($request)
@@ -70,6 +70,17 @@ class DonneesMedicalRepository
         $DonneesMedical = DonneesMedical::find($id);
         return $DonneesMedical->secureDelete('predictions');
 
+    }
+
+    public function displayPatientsWithDonnees ()
+    {
+        $donnees = DonneesMedical::all();
+        $patients = [];
+        foreach($donnees as $donnee) {
+            $patient = $donnee->patient;
+            array_push($patients, $patient);
+        }
+        return $patientsCollection = collect($patients);
     }
 
 

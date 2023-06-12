@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
         $admin=User::Create([
             'nom' => 'Admin',
             'email' => 'admin@admin.com',
-            'mot_de_passe' => bcrypt('123456789'),
+            'mot_de_passe' => '123456789',
             'prenoms' => 'admin',
             'numero_de_telephone' => 00000000
 
