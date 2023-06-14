@@ -34,11 +34,11 @@ class PatientRepository
 
     public function displayAllPatients()
     {
-        return Patient::all();
+        return Patient::with('donnees','predictions')->get();
     }
     public function displayAPatientDetails($id)
     {
-        return Patient::where('id', $id)->first();
+        return Patient::with('donnees','predictions')->where('id', $id)->first();
     }
     public function registerAPatient($request)
     {
