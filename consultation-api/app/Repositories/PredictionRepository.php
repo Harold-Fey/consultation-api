@@ -72,6 +72,7 @@ class PredictionRepository
         $patients = [];
         foreach($predictions as $prediction) {
             $patient = $prediction->patient;
+            $patient->load('predictions');
             array_push($patients, $patient);
         }
         return $patientsCollection = collect($patients);
