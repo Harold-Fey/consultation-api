@@ -78,7 +78,7 @@ class DonneesMedicalRepository
         $patients = [];
         foreach($donnees as $donnee) {
             $patient = $donnee->patient;
-            $patient->load('donnees');
+            $patient->load('donnees', 'predictions');
             array_push($patients, $patient);
         }
         return $patientsCollection = collect($patients);
